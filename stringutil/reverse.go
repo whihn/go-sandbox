@@ -1,6 +1,6 @@
 package stringutil
 
-func Reverse(input string) string {
+func reverse(input string) string {
 	r := []rune(input)
 	return string(r)
 }

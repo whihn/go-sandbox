@@ -2,10 +2,12 @@ package stringutil
 
 import (
 	"testing"
-	"fmt"
 )
 
 func TestShouldReturnPassedString(t *testing.T) {
 
-	fmt.Println(Reverse("foo"))	
+	result := reverse("foo")
+	if result != "foo" {
+		t.Error("failed...")
+	}
 }
