@@ -1,8 +1,8 @@
-package main 
+package main
 
 import (
-	"testing"
 	"../stringutil"
+	"testing"
 )
 
 func TestShouldFail(t *testing.T) {
