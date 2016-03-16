@@ -2,9 +2,12 @@ package main
 
 import (
 	"testing"
-	"fmt"
+	"../stringutil"
 )
 
 func TestShouldFail(t *testing.T) {
-	fmt.Println("first test...")	
+	result := stringutil.Reverse("foo")
+	if result != "foo" {
+		t.Error("expected " + result + " to be foo")
+	}
 }

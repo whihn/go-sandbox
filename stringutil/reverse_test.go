@@ -6,7 +6,7 @@ import (
 
 func TestShouldReturnPassedString(t *testing.T) {
 
-	result := reverse("foo")
+	result := Reverse("foo")
 	if result != "foo" {
 		t.Error("failed...")
 	}
