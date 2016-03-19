@@ -15,7 +15,7 @@ User Stories:
 
 Engineering Tasks:
 
-- walking skeleton (command line tool, that can take a folder as an argument and print it to console)
+* walking skeleton (command line tool, that can take a folder as an argument and print it to console)
 - crawl all images in that directory
 - print info about crawled images to console (amount, file formats)
 
