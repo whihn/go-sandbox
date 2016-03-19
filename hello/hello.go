@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/whihn/go-sandbox/fileutils"
+)
 
 func main() {
-	fmt.Println("Hello world")
+	fmt.Println("starting crawler...")
+	fileutils.Crawl("/Users/werner/")
 }
