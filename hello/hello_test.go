@@ -1,13 +1,14 @@
 package main
 
 import (
-	"../stringutil"
+	"github.com/whihn/go-sandbox/fileutils"
 	"testing"
 )
 
-func TestShouldFail(t *testing.T) {
-	result := stringutil.Reverse("foo")
-	if result != "foo" {
-		t.Error("expected " + result + " to be foo")
-	}
+func TestShouldPrintPassedDirectory(t *testing.T) {
+	// result := stringutil.Reverse("foo")
+	// if result != "foo" {
+	// 	t.Error("expected " + result + " to be foo")
+	// }
+	fileutils.Crawl("/test")
 }
