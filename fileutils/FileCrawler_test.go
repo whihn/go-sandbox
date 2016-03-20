@@ -1,8 +1,8 @@
 package fileutils
 
 import (
-	"testing"
 	"../fileutils"
+	"testing"
 )
 
 func TestCreatesFileCrawlerWithRootDirectory(t *testing.T) {
