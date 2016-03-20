@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestShouldPrintPassedDirectory(t *testing.T) {
+func TestPrintsPassedDirectory(t *testing.T) {
 	// result := stringutil.Reverse("foo")
 	// if result != "foo" {
 	// 	t.Error("expected " + result + " to be foo")
