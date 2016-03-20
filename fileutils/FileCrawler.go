@@ -7,7 +7,7 @@ import (
 
 func Crawl(dir string) Directory {
 	fmt.Println(dir)
-	file := Directory{Name: "/test"}
+	file := Directory{Name: dir}
 	return file
 }
 
