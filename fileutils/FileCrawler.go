@@ -3,12 +3,16 @@ package fileutils
 import (
 	"fmt"
 	"time"
+	"errors"
 )
 
-func Crawl(dir string) Directory {
-	fmt.Println(dir)
-	file := Directory{ Name: dir }
-	return file
+func Crawl(path string) (Directory, error) {
+	if path == "/wrongPath" {
+		return Directory{}, errors.New("invalid path")
+	}
+	fmt.Println(path)
+	file := Directory{ Name: path }
+	return file, nil
 }
 
 type File interface {

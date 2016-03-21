@@ -6,7 +6,10 @@ import (
 )
 
 func TestCreatesFileCrawlerWithRootDirectory(t *testing.T) {
-	var file fileutils.Directory = fileutils.Crawl("/test")
+	file, err := fileutils.Crawl("/test")
+	if err != nil {
+		t.Fatal("Error was thrown", err)
+	}
 	assertEquals(t, "/test", file.Name)
 }
 
