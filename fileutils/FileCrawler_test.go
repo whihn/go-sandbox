@@ -12,6 +12,6 @@ func TestCreatesFileCrawlerWithRootDirectory(t *testing.T) {
 
 func assertEquals(t *testing.T, expected, actual interface{}) {
 	if expected != actual {
-		t.Errorf("Expected %#v, but got %#v", expected, actual)
+		t.Error("Expected", expected, "got", actual)
 	}
 }
