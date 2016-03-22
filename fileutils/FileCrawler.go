@@ -4,15 +4,18 @@ import (
 	"fmt"
 	"time"
 	"errors"
+	"os"
 )
 
 func Crawl(path string) (Directory, error) {
-	if path == "/wrongPath" {
+	file, err := os.Open(path)
+	if err != nil {
 		return Directory{}, errors.New("invalid path")
 	}
-	fmt.Println(path)
-	file := Directory{ Name: path }
-	return file, nil
+
+	fileInfos, err := file.Readdir(0)
+	dir := Directory{ Name: path, FileInfos: fileInfos }
+	return dir, err
 }
 
 type File interface {
@@ -23,6 +26,7 @@ type File interface {
 
 type Directory struct {
 	Name string
+	FileInfos []os.FileInfo
 }
 
 func timestamp(file Directory) {
